@@ -1,0 +1,16 @@
+/* Search — component design tokens
+   Override at any ancestor: .my-section { --search-focus-color: #7c3aed; }
+   Rename to Search.module.scss once `sass` is installed (npm install -D sass). */
+
+.root {
+  --search-focus-color: #2563eb;
+  --search-border-default: #d1d5db;
+  --search-disabled-bg: #f3f4f6;
+  --search-icon-color: #9ca3af;
+  --search-transition: 150ms ease;
+}
+
+/* Icon — structural only; colour handled by Tailwind */
+.icon {
+  transition: opacity var(--search-transition);
+}

@@ -1,0 +1,28 @@
+/* TextArea — component design tokens
+   Non-layered CSS sits above @layer utilities in the cascade, so these
+   background rules reliably override Shadcn's bg-background utility
+   without needing !important.
+   Rename to .module.scss once `sass` is installed. */
+
+.root {
+  --textarea-focus-color: #2563eb;
+  --textarea-error-color: #dc2626;
+  --textarea-disabled-bg: #f3f4f6;
+  --textarea-readonly-bg: #f3f4f6;
+  --textarea-error-bg: #fef2f2;
+  --textarea-border-default: #d1d5db;
+}
+
+/* State backgrounds — override Shadcn's bg-background via cascade priority */
+.errorBg {
+  background-color: var(--textarea-error-bg);      /* #fef2f2 — light red */
+}
+
+.readOnlyBg {
+  background-color: var(--textarea-readonly-bg);   /* #f3f4f6 — gray-100 */
+}
+
+.disabledBg {
+  background-color: var(--textarea-disabled-bg);   /* #f3f4f6 — gray-100 */
+  opacity: 1;                                       /* override Shadcn disabled:opacity-50 */
+}

@@ -1,0 +1,12 @@
+/* Breadcrumb — component design tokens
+   Rename to Breadcrumb.module.scss once sass is installed. */
+
+.nav {
+  --breadcrumb-link-color: #2563eb;
+  --breadcrumb-link-hover-color: #1d4ed8;
+  --breadcrumb-link-color-dark: #60a5fa;
+  --breadcrumb-muted-color: #6b7280;
+  --breadcrumb-separator-color: #9ca3af;
+  --breadcrumb-separator-mx: 0.5rem;
+  --breadcrumb-transition: 150ms ease;
+}

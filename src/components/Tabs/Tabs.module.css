@@ -1,0 +1,28 @@
+/* Tabs — component design tokens
+   Rename to Tabs.module.scss once sass is installed.
+   Original SCSS nesting (&:focus-visible) is flattened here for plain CSS. */
+
+.root {
+  --tabs-active-color: #2563eb;
+  --tabs-active-color-dark: #60a5fa;
+  --tabs-inactive-color: #6b7280;
+  --tabs-inactive-hover: #374151;
+  --tabs-border-color: #e5e7eb;
+  --tabs-indicator-thickness: 2px;
+  --tabs-transition: 150ms ease;
+}
+
+.trigger {
+  position: relative;
+}
+
+.trigger:focus-visible {
+  outline-offset: 2px;
+}
+
+.indicator {
+  position: absolute;
+  border-radius: 9999px;
+  background-color: transparent;
+  transition: background-color var(--tabs-transition);
+}
