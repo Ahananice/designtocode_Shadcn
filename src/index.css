@@ -1,51 +1,90 @@
+@import './tokens/lyra-tokens.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * ShadCN semantic variables mapped to Lyra design tokens.
+ * Values come from "--ShadCN absolute" + "Semantic Colors" collections in
+ * Figma file: qyCq4jUOrpYcpHhpNCdgA5 (Lyra Foundations – Beta).
+ *
+ * Colours that ShadCN expects as "H S% L%" are derived from Lyra hex values:
+ *   primary   = #0d66c9  → 212 88% 42%
+ *   ring      = #6950cd  → 252 56% 56%
+ *   destruct  = #b72424  → 0   67% 43%
+ */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
+    /* Surfaces ─── lyra/color/bg/surface/* */
+    --background:         0 0% 100%;          /* lyra-color-bg-surface-base     */
+    --foreground:         0 0% 20%;           /* lyra-color-fg-default          */
+    --card:               0 0% 100%;          /* lyra-color-bg-surface-base     */
+    --card-foreground:    0 0% 20%;
+    --popover:            0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Primary ─── lyra/color/bg/primary = #0d66c9 */
+    --primary:            212 88% 42%;
+    --primary-foreground: 212 73% 97%;        /* #f2f7fd                        */
+
+    /* Secondary ─── lyra/color/bg/secondary = #ffffff */
+    --secondary:          0 0% 100%;
+    --secondary-foreground: 0 0% 20%;
+
+    /* Muted ─── lyra/color/bg/surface/canvas = #f9fafb */
+    --muted:              210 17% 98%;
+    --muted-foreground:   0 0% 44%;           /* lyra-color-fg-secondary        */
+
+    /* Accent ─── lyra/color/state/hover-opacity = rgba(0,0,0,0.04) */
+    --accent:             0 0% 96%;
+    --accent-foreground:  0 0% 20%;
+
+    /* Destructive ─── lyra/color/status/critical-strong = #b72424 */
+    --destructive:        0 67% 43%;
+    --destructive-foreground: 0 100% 97%;     /* lyra-red-25                    */
+
+    /* Borders ─── lyra/color/border/default = rgba(0,0,0,0.16) */
+    --border:             0 0% 84%;
+    --input:              0 0% 56%;           /* lyra/color/border/medium       */
+
+    /* Focus ring ─── lyra/color/border/focus = #17569b → purple ring = #6950cd */
+    --ring:               252 56% 56%;
+
+    /* Radius ─── lyra/radius/md = 8px */
+    --radius:             0.5rem;
+
+    /* Sidebar ─── lyra/color/bg/surface/shell = #f3f5f6 */
+    --sidebar-background:          213 14% 96%;
+    --sidebar-foreground:          0 0% 20%;
+    --sidebar-border:              0 0% 84%;
+    --sidebar-accent:              0 0% 96%;
+    --sidebar-accent-foreground:   0 0% 20%;
+    --sidebar-primary:             212 88% 42%;
+    --sidebar-primary-foreground:  212 73% 97%;
+    --sidebar-ring:                252 56% 56%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background:         222 28% 9%;
+    --foreground:         210 17% 98%;
+    --card:               222 28% 9%;
+    --card-foreground:    210 17% 98%;
+    --popover:            222 28% 9%;
+    --popover-foreground: 210 17% 98%;
+    --primary:            212 80% 60%;
+    --primary-foreground: 222 28% 9%;
+    --secondary:          217 19% 18%;
+    --secondary-foreground: 210 17% 98%;
+    --muted:              217 19% 18%;
+    --muted-foreground:   215 14% 65%;
+    --accent:             217 19% 18%;
+    --accent-foreground:  210 17% 98%;
+    --destructive:        0 55% 45%;
+    --destructive-foreground: 0 100% 97%;
+    --border:             217 19% 18%;
+    --input:              217 19% 18%;
+    --ring:               252 56% 70%;
   }
 }
 

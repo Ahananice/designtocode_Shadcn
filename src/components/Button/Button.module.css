@@ -1,30 +1,13 @@
-/* Button — component design tokens
-   Override at any ancestor: .my-section { --btn-primary-bg: #7c3aed; }
-   Rename to Button.module.scss once sass is installed. */
+/* Button — Lyra design tokens
+   All colour and size values come from --lyra-color-* / --lyra-control-* variables
+   defined in src/tokens/lyra-tokens.css.
+   Override per-scope: .my-section { --lyra-color-bg-primary: #7c3aed; } */
 
 .root {
-  --btn-radius: 6px;
-  --btn-font-size: 0.875rem;
+  /* Typography — Lyra text/sm = 14px, weight 500 */
+  --btn-font-size:   var(--lyra-text-sm);
   --btn-font-weight: 500;
-  --btn-ring-color: #3B82F6;
 
-  /* default (outline) */
-  --btn-default-bg: #ffffff;
-  --btn-default-bg-hover: #F9FAFB;
-  --btn-default-border: #D1D5DB;
-  --btn-default-text: #374151;
-
-  /* primary */
-  --btn-primary-bg: #1D4ED8;
-  --btn-primary-bg-hover: #2563EB;
-  --btn-primary-bg-active: #1E40AF;
-
-  /* destructive */
-  --btn-destructive-bg: #B91C1C;
-  --btn-destructive-bg-hover: #DC2626;
-  --btn-destructive-bg-active: #991B1B;
-
-  /* ghost */
-  --btn-ghost-text: #4B5563;
-  --btn-ghost-bg-hover: #F3F4F6;
+  /* Focus ring — Lyra border/focus = #17569b */
+  --btn-ring-color: var(--lyra-color-border-focus);
 }

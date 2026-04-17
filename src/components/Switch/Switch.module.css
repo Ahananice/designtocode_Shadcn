@@ -1,0 +1,7 @@
+/* Switch — Lyra design tokens
+   All colour values come from --lyra-color-* variables in src/tokens/lyra-tokens.css. */
+
+.root {
+  /* expose focus ring colour for the radix primitive */
+  --switch-ring-color: var(--lyra-color-border-focus);
+}
