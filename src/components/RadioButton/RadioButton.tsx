@@ -60,27 +60,26 @@ const RadioButton = React.forwardRef<
           // ── Read-only ─────────────────────────────────────────────
           isReadOnly && [
             'cursor-default pointer-events-none',
-            // unchecked look stays the same; checked switches to gray (handled via data-state below)
-            'data-[state=unchecked]:border-[var(--lyra-color-border-medium)] data-[state=unchecked]:bg-white',
-            'data-[state=checked]:border-[var(--lyra-color-fg-secondary)] data-[state=checked]:bg-[var(--lyra-color-fg-secondary)]',
+            'data-[state=unchecked]:!border-[var(--lyra-color-border-medium)] data-[state=unchecked]:!bg-white',
+            'data-[state=checked]:!border-[var(--lyra-color-fg-secondary)] data-[state=checked]:!bg-[var(--lyra-color-fg-secondary)]',
           ],
 
           // ── Disabled ──────────────────────────────────────────────
           isDisabled && [
             'cursor-not-allowed',
-            'data-[state=unchecked]:border-[var(--lyra-color-border-disabled)] data-[state=unchecked]:bg-[var(--lyra-color-bg-disabled)]',
-            'data-[state=checked]:border-[var(--lyra-color-border-disabled)] data-[state=checked]:bg-[var(--lyra-color-bg-disabled)]',
+            'data-[state=unchecked]:!border-[var(--lyra-color-border-disabled)] data-[state=unchecked]:!bg-[var(--lyra-color-bg-disabled)]',
+            'data-[state=checked]:!border-[var(--lyra-color-border-disabled)] data-[state=checked]:!bg-[var(--lyra-color-bg-disabled)]',
           ],
 
           // ── Normal interactive ─────────────────────────────────────
           !isDisabled && !isReadOnly && [
             'cursor-pointer',
-            // Unchecked
-            'data-[state=unchecked]:border-[var(--lyra-color-border-medium)] data-[state=unchecked]:bg-white',
+            // Unchecked — default / hover / pressed
+            'data-[state=unchecked]:!border-[var(--lyra-color-border-medium)] data-[state=unchecked]:!bg-white',
             'data-[state=unchecked]:hover:!border-[var(--lyra-color-border-strong)]',
             'data-[state=unchecked]:active:!border-[var(--lyra-color-fg-default)]',
-            // Checked
-            'data-[state=checked]:border-lyra-bg-primary data-[state=checked]:bg-lyra-bg-primary',
+            // Checked — default / hover / pressed
+            'data-[state=checked]:!border-lyra-bg-primary data-[state=checked]:!bg-lyra-bg-primary',
             'data-[state=checked]:hover:!border-[var(--lyra-color-state-hover-primary)] data-[state=checked]:hover:!bg-[var(--lyra-color-state-hover-primary)]',
             'data-[state=checked]:active:!border-[var(--lyra-color-state-pressed-primary)] data-[state=checked]:active:!bg-[var(--lyra-color-state-pressed-primary)]',
           ],
@@ -93,8 +92,8 @@ const RadioButton = React.forwardRef<
             className={cn(
               'block h-[6px] w-[6px] rounded-full',
               isDisabled
-                ? 'bg-[var(--lyra-color-fg-disabled)]'
-                : 'bg-white',
+                ? '!bg-[var(--lyra-color-fg-disabled)]'
+                : '!bg-white',
             )}
           />
         </RadioGroupPrimitive.Indicator>

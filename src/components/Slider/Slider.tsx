@@ -208,7 +208,7 @@ const Slider = React.forwardRef<
                 type="button"
                 aria-label={helpText}
                 className={cn(
-                  'text-lyra-fg-secondary hover:text-lyra-fg-default transition-colors',
+                  'text-lyra-fg-secondary hover:!text-lyra-fg-default transition-colors',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lyra-border-focus rounded',
                 )}
               >
