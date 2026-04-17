@@ -1,0 +1,446 @@
+/**
+ * Lyra Design Tokens
+ * Auto-synced from Figma: qyCq4jUOrpYcpHhpNCdgA5 (Lyra Foundations – Beta)
+ *
+ * Collections used:
+ *  - Base Colors        → --lyra-{color}-{shade}
+ *  - Semantic Colors    → --lyra-color-bg-*, --lyra-color-fg-*, --lyra-color-border-*,
+ *                         --lyra-color-status-*, --lyra-color-state-*, --lyra-color-accent-*
+ *  - Semantic Sizes     → --lyra-spacing-*, --lyra-radius-*, --lyra-border-*,
+ *                         --lyra-control-*, --lyra-row-*, --lyra-icon-*
+ *  - Base Typography    → --lyra-text-*, --lyra-leading-*, --lyra-weight-*, --lyra-tracking-*
+ */
+
+:root {
+  /* ─────────────────────────────────────────────────────
+     BASE COLORS
+  ───────────────────────────────────────────────────── */
+
+  /* Brand (light blue) */
+  --lyra-brand-25:  #f5faff;
+  --lyra-brand-50:  #ecf5fe;
+  --lyra-brand-100: #e5f2ff;
+  --lyra-brand-200: #d2e7fe;
+  --lyra-brand-300: #a7d0fe;
+  --lyra-brand-400: #5ea9fd;
+  --lyra-brand-500: #308ff8;
+  --lyra-brand-600: #126bce;
+  --lyra-brand-700: #17569b;
+  --lyra-brand-800: #164479;
+  --lyra-brand-900: #0e2d4e;
+  --lyra-brand-950: #0b233d;
+
+  /* Blue */
+  --lyra-blue-25:  #f0f5ff;
+  --lyra-blue-50:  #e5eeff;
+  --lyra-blue-100: #d6e4ff;
+  --lyra-blue-200: #b2ccff;
+  --lyra-blue-300: #87acf7;
+  --lyra-blue-400: #578bf4;
+  --lyra-blue-500: #326feb;
+  --lyra-blue-600: #2558c1;
+  --lyra-blue-700: #1e499f;
+  --lyra-blue-800: #18397c;
+  --lyra-blue-900: #162d5a;
+  --lyra-blue-950: #0f1b34;
+
+  /* Gray */
+  --lyra-gray-25:  #fafafa;
+  --lyra-gray-50:  #f5f5f5;
+  --lyra-gray-100: #ededed;
+  --lyra-gray-200: #e0e0e0;
+  --lyra-gray-300: #c7c7c7;
+  --lyra-gray-400: #a8a8a8;
+  --lyra-gray-500: #868686;
+  --lyra-gray-600: #626262;
+  --lyra-gray-700: #3d3d3d;
+  --lyra-gray-800: #333333;
+  --lyra-gray-900: #282828;
+  --lyra-gray-950: #1c1c1c;
+
+  /* Slate */
+  --lyra-slate-25:  #f9fafb;
+  --lyra-slate-50:  #f3f5f6;
+  --lyra-slate-100: #e8ebed;
+  --lyra-slate-200: #dce0e5;
+  --lyra-slate-300: #c1c9d2;
+  --lyra-slate-400: #9ea8b3;
+  --lyra-slate-500: #7f8b9a;
+  --lyra-slate-600: #5d6a79;
+  --lyra-slate-700: #47515c;
+  --lyra-slate-800: #343d46;
+  --lyra-slate-900: #272d35;
+  --lyra-slate-950: #1b2127;
+
+  /* Green */
+  --lyra-green-25:  #ebfaed;
+  --lyra-green-50:  #def7e1;
+  --lyra-green-100: #d2f4d5;
+  --lyra-green-200: #aeeab6;
+  --lyra-green-300: #6cd57a;
+  --lyra-green-400: #36ba47;
+  --lyra-green-500: #1a9b2a;
+  --lyra-green-600: #21742c;
+  --lyra-green-700: #1f5c27;
+  --lyra-green-800: #1b4c22;
+  --lyra-green-900: #153c1b;
+  --lyra-green-950: #0f2a13;
+
+  /* Red */
+  --lyra-red-25:  #fff0f0;
+  --lyra-red-50:  #ffe5e5;
+  --lyra-red-100: #ffdbdb;
+  --lyra-red-200: #ffbdbd;
+  --lyra-red-300: #ff8f8f;
+  --lyra-red-400: #ff6161;
+  --lyra-red-500: #e12f2f;
+  --lyra-red-600: #bf2323;
+  --lyra-red-700: #902222;
+  --lyra-red-800: #6d2222;
+  --lyra-red-900: #4e1d1d;
+  --lyra-red-950: #331a1a;
+
+  /* Yellow */
+  --lyra-yellow-25:  #fffae0;
+  --lyra-yellow-50:  #fff7c7;
+  --lyra-yellow-100: #fff3ad;
+  --lyra-yellow-200: #ffe680;
+  --lyra-yellow-300: #ffd64e;
+  --lyra-yellow-400: #f6bd00;
+  --lyra-yellow-500: #be8b00;
+  --lyra-yellow-600: #8e6800;
+  --lyra-yellow-700: #674b13;
+  --lyra-yellow-800: #513d15;
+  --lyra-yellow-900: #3d3014;
+  --lyra-yellow-950: #2e2614;
+
+  /* Orange */
+  --lyra-orange-25:  #fff4eb;
+  --lyra-orange-50:  #ffecdb;
+  --lyra-orange-100: #ffe2c7;
+  --lyra-orange-200: #ffcc9e;
+  --lyra-orange-300: #ffad65;
+  --lyra-orange-400: #ff8f2b;
+  --lyra-orange-500: #ec7000;
+  --lyra-orange-600: #a64f00;
+  --lyra-orange-700: #7d420c;
+  --lyra-orange-800: #63360d;
+  --lyra-orange-900: #4f2c0d;
+  --lyra-orange-950: #3c220b;
+
+  /* Purple */
+  --lyra-purple-25:  #f7f5ff;
+  --lyra-purple-50:  #efebff;
+  --lyra-purple-100: #e6e0ff;
+  --lyra-purple-200: #d1c9f2;
+  --lyra-purple-300: #b9aaee;
+  --lyra-purple-400: #967be5;
+  --lyra-purple-500: #765cda;
+  --lyra-purple-600: #5d46b8;
+  --lyra-purple-700: #4e39a8;
+  --lyra-purple-800: #42308d;
+  --lyra-purple-900: #31265f;
+  --lyra-purple-950: #221b41;
+
+  /* Teal */
+  --lyra-teal-25:  #ebf8f9;
+  --lyra-teal-50:  #d6f3f5;
+  --lyra-teal-100: #c4f0f3;
+  --lyra-teal-200: #a7e3e8;
+  --lyra-teal-300: #73ced5;
+  --lyra-teal-400: #46b3bb;
+  --lyra-teal-500: #09939e;
+  --lyra-teal-600: #11737c;
+  --lyra-teal-700: #1b636a;
+  --lyra-teal-800: #194d52;
+  --lyra-teal-900: #173b3f;
+  --lyra-teal-950: #12292c;
+
+  /* Pink */
+  --lyra-pink-25:  #fff5fc;
+  --lyra-pink-50:  #ffebf8;
+  --lyra-pink-100: #ffe0f5;
+  --lyra-pink-200: #fccaeb;
+  --lyra-pink-300: #f7abde;
+  --lyra-pink-400: #ec83c9;
+  --lyra-pink-500: #dc51ae;
+  --lyra-pink-600: #b53389;
+  --lyra-pink-700: #91296e;
+  --lyra-pink-800: #702055;
+  --lyra-pink-900: #4f173c;
+  --lyra-pink-950: #331429;
+
+  /* Lime */
+  --lyra-lime-25:  #f7fee7;
+  --lyra-lime-50:  #ebfac7;
+  --lyra-lime-100: #def6a7;
+  --lyra-lime-200: #caf075;
+  --lyra-lime-300: #acdc47;
+  --lyra-lime-400: #88c313;
+  --lyra-lime-500: #6aa300;
+  --lyra-lime-600: #4f760c;
+  --lyra-lime-700: #446311;
+  --lyra-lime-800: #3a5413;
+  --lyra-lime-900: #2e430f;
+  --lyra-lime-950: #1d2e05;
+
+  /* Neutrals */
+  --lyra-white: #ffffff;
+  --lyra-black: #000000;
+
+  /* ─────────────────────────────────────────────────────
+     SEMANTIC COLORS — Background
+     lyra/color/bg/*
+  ───────────────────────────────────────────────────── */
+
+  /* Surfaces */
+  --lyra-color-bg-surface-base:             #ffffff;
+  --lyra-color-bg-surface-canvas:           #f9fafb;
+  --lyra-color-bg-surface-shell:            #f3f5f6;
+  --lyra-color-bg-surface-container:        #ffffff;
+  --lyra-color-bg-surface-container-subtle: rgba(0,0,0,0.02);
+  --lyra-color-bg-surface-inverse:          #343d46;
+  --lyra-color-bg-surface-overlay:          #ffffff;
+  --lyra-color-bg-surface-backdrop:         rgba(0,0,0,0.24);
+
+  /* Intent */
+  --lyra-color-bg-primary:      #126bce;
+  --lyra-color-bg-secondary:    #ffffff;
+  --lyra-color-bg-destructive:  #bf2323;
+  --lyra-color-bg-disabled:     rgba(0,0,0,0.06);
+  --lyra-color-bg-field:        #ffffff;
+  --lyra-color-bg-field-ai:     rgba(143,115,227,0.04);
+  --lyra-color-bg-control:      #ffffff;
+  --lyra-color-bg-control-subtle: rgba(0,0,0,0.02);
+  --lyra-color-bg-wash:         rgba(0,0,0,0.01);
+  --lyra-color-bg-none:         transparent;
+
+  /* Active / Brand */
+  --lyra-color-bg-active-strong:   #126bce;
+  --lyra-color-bg-active-subtle:   #ecf5fe;
+  --lyra-color-bg-active-moderate: rgba(44,138,242,0.18);
+
+  /* Conversation */
+  --lyra-color-bg-conversation-agent:    rgba(44,138,242,0.18);
+  --lyra-color-bg-conversation-customer: #d2f4d5;
+  --lyra-color-bg-conversation-ai:       #f3f5f6;
+
+  /* ─────────────────────────────────────────────────────
+     SEMANTIC COLORS — Foreground
+     lyra/color/fg/*
+  ───────────────────────────────────────────────────── */
+  --lyra-color-fg-default:          rgba(0,0,0,0.8);
+  --lyra-color-fg-secondary:        rgba(0,0,0,0.56);
+  --lyra-color-fg-disabled:         rgba(0,0,0,0.3);
+  --lyra-color-fg-inverse:          #ffffff;
+  --lyra-color-fg-inverse-disabled: rgba(255,255,255,0.3);
+  --lyra-color-fg-link:             #126bce;
+  --lyra-color-fg-on-primary:       #ffffff;
+  --lyra-color-fg-on-destructive:   #ffffff;
+  --lyra-color-fg-action:           #5d6a79;
+  --lyra-color-fg-active-strong:    #17569b;
+  --lyra-color-fg-active-subtle:    #f5faff;
+
+  /* ─────────────────────────────────────────────────────
+     SEMANTIC COLORS — Border
+     lyra/color/border/*
+  ───────────────────────────────────────────────────── */
+  --lyra-color-border-default:      rgba(0,0,0,0.16);
+  --lyra-color-border-subtle:       rgba(0,0,0,0.10);
+  --lyra-color-border-medium:       rgba(0,0,0,0.32);
+  --lyra-color-border-strong:       rgba(0,0,0,0.46);
+  --lyra-color-border-active:       #126bce;
+  --lyra-color-border-disabled:     rgba(0,0,0,0.10);
+  --lyra-color-border-field-ai:     #5d46b8;
+  --lyra-color-border-inverse:      rgba(255,255,255,0.8);
+  --lyra-color-border-none:         transparent;
+  --lyra-color-border-focus:        #17569b;
+  --lyra-color-border-focus-inverse: #ffd64e;
+
+  /* ─────────────────────────────────────────────────────
+     SEMANTIC COLORS — Status
+     lyra/color/status/*
+  ───────────────────────────────────────────────────── */
+
+  /* Critical / Error */
+  --lyra-color-status-critical-strong: #bf2323;
+  --lyra-color-status-critical-medium: #ffbdbd;
+  --lyra-color-status-critical-subtle: #fff0f0;
+
+  /* Warning */
+  --lyra-color-status-warning-strong: #8e6800;
+  --lyra-color-status-warning-medium: #ffe680;
+  --lyra-color-status-warning-subtle: #fffae0;
+
+  /* Success */
+  --lyra-color-status-success-strong: #21742c;
+  --lyra-color-status-success-medium: #aeeab6;
+  --lyra-color-status-success-subtle: #ebfaed;
+
+  /* Info */
+  --lyra-color-status-info-strong: #2558c1;
+  --lyra-color-status-info-medium: #b2ccff;
+  --lyra-color-status-info-subtle: #f0f5ff;
+
+  /* ─────────────────────────────────────────────────────
+     SEMANTIC COLORS — Interaction States
+     lyra/color/state/*
+  ───────────────────────────────────────────────────── */
+
+  /* Hover */
+  --lyra-color-state-hover-opacity:         rgba(0,0,0,0.04);
+  --lyra-color-state-hover-primary:         #17569b;
+  --lyra-color-state-hover-secondary:       #f9fafb;
+  --lyra-color-state-hover-active-strong:   #17569b;
+  --lyra-color-state-hover-active-subtle:   #e5f2ff;
+  --lyra-color-state-hover-critical-strong: #902222;
+  --lyra-color-state-hover-critical-subtle: #fff0f0;
+  --lyra-color-state-hover-border-neutral:  rgba(0,0,0,0.8);
+
+  /* Pressed */
+  --lyra-color-state-pressed-opacity:         rgba(0,0,0,0.08);
+  --lyra-color-state-pressed-primary:         #164479;
+  --lyra-color-state-pressed-secondary:       #f3f5f6;
+  --lyra-color-state-pressed-active-strong:   #164479;
+  --lyra-color-state-pressed-active-subtle:   #d2e7fe;
+  --lyra-color-state-pressed-critical-strong: #6d2222;
+  --lyra-color-state-pressed-critical-subtle: #ffe5e5;
+
+  /* ─────────────────────────────────────────────────────
+     SEMANTIC COLORS — Accent
+     lyra/color/accent/*  (use for badges, tags, chips)
+  ───────────────────────────────────────────────────── */
+  --lyra-color-accent-blue-subtle:   #e5edfe;
+  --lyra-color-accent-blue-soft:     #d6e4ff;
+  --lyra-color-accent-blue-strong:   #326feb;
+  --lyra-color-accent-blue-fg:       #1e499f;
+
+  --lyra-color-accent-green-subtle:  #ddf7e4;
+  --lyra-color-accent-green-soft:    #d2f4d5;
+  --lyra-color-accent-green-strong:  #21742c;
+  --lyra-color-accent-green-fg:      #1f5c27;
+
+  --lyra-color-accent-red-subtle:    #ffebeb;
+  --lyra-color-accent-red-soft:      #ffdbdb;
+  --lyra-color-accent-red-strong:    #e12f2f;
+  --lyra-color-accent-red-fg:        #902222;
+
+  --lyra-color-accent-yellow-soft:   #fff3ad;
+  --lyra-color-accent-yellow-strong: #8e6800;
+  --lyra-color-accent-yellow-fg:     #674b13;
+
+  --lyra-color-accent-orange-soft:   #ffe2c7;
+  --lyra-color-accent-orange-strong: #a64f00;
+  --lyra-color-accent-orange-fg:     #7d420c;
+
+  --lyra-color-accent-purple-subtle: #f0e7ff;
+  --lyra-color-accent-purple-soft:   #e6e0ff;
+  --lyra-color-accent-purple-strong: #6940b0;
+  --lyra-color-accent-purple-fg:     #4e39a8;
+
+  --lyra-color-accent-teal-soft:     #c4f0f3;
+  --lyra-color-accent-teal-strong:   #11737c;
+  --lyra-color-accent-teal-fg:       #1b636a;
+
+  --lyra-color-accent-pink-soft:     #ffe0f5;
+  --lyra-color-accent-pink-strong:   #b53389;
+  --lyra-color-accent-pink-fg:       #91296e;
+
+  --lyra-color-accent-lime-soft:     #def6a7;
+  --lyra-color-accent-lime-strong:   #4f760c;
+  --lyra-color-accent-lime-fg:       #446311;
+
+  --lyra-color-accent-slate-subtle:  #e7eaee;
+  --lyra-color-accent-slate-soft:    #e8ebed;
+  --lyra-color-accent-slate-strong:  #43586f;
+  --lyra-color-accent-slate-fg:      #47515c;
+
+  /* ─────────────────────────────────────────────────────
+     SPACING
+  ───────────────────────────────────────────────────── */
+  --lyra-spacing-0:  0px;
+  --lyra-spacing-05: 2px;
+  --lyra-spacing-1:  4px;
+  --lyra-spacing-2:  8px;
+  --lyra-spacing-3:  12px;
+  --lyra-spacing-4:  16px;
+  --lyra-spacing-5:  20px;
+  --lyra-spacing-6:  24px;
+  --lyra-spacing-7:  28px;
+  --lyra-spacing-8:  32px;
+  --lyra-spacing-9:  36px;
+  --lyra-spacing-10: 40px;
+
+  /* ─────────────────────────────────────────────────────
+     BORDER RADIUS
+  ───────────────────────────────────────────────────── */
+  --lyra-radius-none:  0px;
+  --lyra-radius-2xs:   2px;
+  --lyra-radius-xs:    4px;
+  --lyra-radius-sm:    6px;
+  --lyra-radius-md:    8px;
+  --lyra-radius-lg:    12px;
+  --lyra-radius-xl:    16px;
+  --lyra-radius-round: 999px;
+
+  /* ─────────────────────────────────────────────────────
+     BORDER WIDTHS
+  ───────────────────────────────────────────────────── */
+  --lyra-border-none:    0px;
+  --lyra-border-default: 1px;
+  --lyra-border-md:      2px;
+  --lyra-border-lg:      4px;
+
+  /* ─────────────────────────────────────────────────────
+     COMPONENT SIZES
+  ───────────────────────────────────────────────────── */
+
+  /* Control heights (inputs, buttons, selects) */
+  --lyra-control-xs: 16px;
+  --lyra-control-sm: 24px;
+  --lyra-control-md: 32px;
+  --lyra-control-lg: 36px;
+  --lyra-control-xl: 40px;
+
+  /* Row heights (tables, lists) */
+  --lyra-row-sm:  32px;
+  --lyra-row-md:  36px;
+  --lyra-row-lg:  40px;
+  --lyra-row-xl:  48px;
+  --lyra-row-2xl: 56px;
+
+  /* Bar / toolbar heights */
+  --lyra-bar-sm: 40px;
+  --lyra-bar-md: 48px;
+
+  /* Icon sizes */
+  --lyra-icon-xs: 12px;
+  --lyra-icon-sm: 16px;
+  --lyra-icon-md: 20px;
+  --lyra-icon-lg: 24px;
+
+  /* ─────────────────────────────────────────────────────
+     TYPOGRAPHY
+  ───────────────────────────────────────────────────── */
+
+  /* Font sizes */
+  --lyra-text-xs:   12px;
+  --lyra-text-sm:   14px;
+  --lyra-text-base: 16px;
+  --lyra-text-xl:   24px;
+
+  /* Line heights */
+  --lyra-leading-tight:  16px;
+  --lyra-leading-normal: 20px;
+  --lyra-leading-loose:  28px;
+
+  /* Font weights */
+  --lyra-weight-regular:  400;
+  --lyra-weight-semibold: 600;
+  --lyra-weight-bold:     700;
+
+  /* Letter spacing */
+  --lyra-tracking-tight:  -0.4px;
+  --lyra-tracking-normal:  0px;
+  --lyra-tracking-wide:    0.2px;
+}

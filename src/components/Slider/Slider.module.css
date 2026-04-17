@@ -1,0 +1,18 @@
+/* Slider — Lyra design tokens
+   All colour values come from --lyra-color-* variables in src/tokens/lyra-tokens.css. */
+
+.root {
+  /* expose the focus ring colour so ui/slider thumb can consume it */
+  --slider-ring-color: var(--lyra-color-border-focus);
+}
+
+/* Tick mark: 2 px wide × 4 px tall, absolute-positioned via inline style */
+.mark {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: var(--lyra-color-fg-default);
+  opacity: 0.4;
+}
