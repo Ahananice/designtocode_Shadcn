@@ -1,0 +1,8 @@
+/* RadioButton — Lyra design tokens
+   All colour values come from --lyra-color-* variables in src/tokens/lyra-tokens.css. */
+
+/* Ensure the Radix Item renders as a true circle (no inner layout shift) */
+.circle {
+  flex-shrink: 0;
+  /* Stroke weight: 1.5 px unchecked, 1 px checked (via border utility class) */
+}
