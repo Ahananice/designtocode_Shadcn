@@ -1,0 +1,8 @@
+/* Checkbox — Lyra design tokens
+   All colour values come from --lyra-color-* variables in src/tokens/lyra-tokens.css. */
+
+/* Ensure the Radix Root renders correctly as a block element */
+.square {
+  flex-shrink: 0;
+  /* Border-radius: 2 px (rounded-sm) per Lyra Foundations spec */
+}

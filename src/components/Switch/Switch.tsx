@@ -133,13 +133,13 @@ const Switch = React.forwardRef<
             'focus-visible:outline-none',
             'focus-visible:ring-2 focus-visible:ring-[var(--lyra-color-border-focus)] focus-visible:ring-offset-1',
 
-            // ── Unchecked track colours ─────────────────────────────
-            'data-[state=unchecked]:bg-[var(--lyra-color-fg-secondary)]',
+            // ── Unchecked track colours — default / hover / pressed ─
+            'data-[state=unchecked]:!bg-[var(--lyra-color-fg-secondary)]',
             'data-[state=unchecked]:hover:!bg-[var(--lyra-color-fg-default)]',
             'data-[state=unchecked]:active:!bg-[rgba(0,0,0,0.9)]',
 
-            // ── Checked track colours ───────────────────────────────
-            'data-[state=checked]:bg-lyra-bg-primary',
+            // ── Checked track colours — default / hover / pressed ───
+            'data-[state=checked]:!bg-lyra-bg-primary',
             'data-[state=checked]:hover:!bg-[var(--lyra-color-state-hover-primary)]',
             'data-[state=checked]:active:!bg-[var(--lyra-color-state-pressed-primary)]',
 
@@ -154,7 +154,7 @@ const Switch = React.forwardRef<
             className={cn(
               // Shape
               'pointer-events-none flex items-center justify-center',
-              'rounded-full bg-white',
+              'rounded-full !bg-white',
               'shadow-[0_1px_3px_rgba(0,0,0,0.20)]',
               'transition-transform duration-150',
               sz.thumb,

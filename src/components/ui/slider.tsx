@@ -82,11 +82,9 @@ const Slider = React.forwardRef<
         {/* ── Track ──────────────────────────────────────────────────── */}
         <SliderPrimitive.Track
           className={cn(
-            'relative h-[2px] w-full grow rounded-full',
-            // Inactive track colour
-            'bg-[var(--lyra-color-fg-secondary)]',
-            // Hide overflow so segments don't bleed outside corners
-            segments ? 'overflow-hidden' : 'overflow-hidden',
+            'relative h-[2px] w-full grow rounded-full overflow-hidden',
+            // Inactive track — !important so Radix/browser cannot override
+            '!bg-[var(--lyra-color-fg-secondary)]',
           )}
         >
           {segments ? (
@@ -105,7 +103,7 @@ const Slider = React.forwardRef<
           ) : (
             // Single / Range: standard Radix Range fill
             <SliderPrimitive.Range
-              className="absolute h-full bg-[var(--lyra-color-fg-active-strong)]"
+              className="absolute h-full !bg-[var(--lyra-color-fg-active-strong)]"
             />
           )}
         </SliderPrimitive.Track>
@@ -116,13 +114,13 @@ const Slider = React.forwardRef<
             key={i}
             className={cn(
               // 20 × 20 white disc, border = fg-default (rgba(0,0,0,0.8))
-              'block h-5 w-5 rounded-full bg-white',
-              'border border-[var(--lyra-color-fg-default)]',
+              'block h-5 w-5 rounded-full !bg-white',
+              '!border !border-[var(--lyra-color-fg-default)]',
               'transition-colors',
               // Focus ring: ~4 px offset giving 28 × 28 ring
               'focus-visible:outline-none',
-              'focus-visible:ring-[4px] focus-visible:ring-[var(--lyra-color-border-focus)]',
-              'disabled:pointer-events-none disabled:opacity-30',
+              'focus-visible:!ring-[4px] focus-visible:!ring-[var(--lyra-color-border-focus)]',
+              'disabled:pointer-events-none disabled:!opacity-30',
             )}
           />
         ))}

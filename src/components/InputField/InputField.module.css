@@ -1,13 +1,21 @@
-/* InputField — component design tokens
-   Override at any ancestor: .my-section { --input-focus-color: #7c3aed; }
-   Rename to InputField.module.scss once `sass` is installed (npm install -D sass). */
+/* InputField — Lyra design tokens
+   All colour values come from --lyra-color-* variables in src/tokens/lyra-tokens.css. */
 
 .root {
-  --input-focus-color: #2563eb;
-  --input-error-color: #dc2626;
-  --input-disabled-bg: #f3f4f6;
-  --input-border-default: #d1d5db;
-  --input-transition: 150ms ease;
+  /* Intentionally empty — all styling via Tailwind utility classes */
+}
+
+/* Suppress native browser date/time/number chrome so our trailing icon is unambiguous */
+.input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 /* Error message row — structural only; colours handled by Tailwind */
